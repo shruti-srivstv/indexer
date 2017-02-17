@@ -7,7 +7,9 @@ The application has two APIs -
 ##To add the content of a new URL to the database
 
 POST /pages
+
 Body : "url" : *URL*
+
 Response: "status" : "SUCCESS *or* FAILURE"
 
 The url is sent as a key pair in the request body instead of the query string to avoid having to encode the URL.
@@ -15,6 +17,7 @@ The url is sent as a key pair in the request body instead of the query string to
 ##To show list of URLs stored
 
 GET /pages
+
 Response: "status" : "SUCCESS *or* FAILURE", "pages" : ["id" : 1, "url" : "www.sample_url.com"], 
 "content" : {"www.sample_url.com" : ["content_type": "a", "data": "link data", "page_id": 1], ["content_type": "a", "data": "more_link data", "page_id": 1]}
 
